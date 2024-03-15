@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вавилов М.А.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-column">
+            <h2>Регистрация:</h2>
+            <form id="myForm" class="myForm">
+                <label for="fullName">Введите ваше ФИО:</label>
+                <input type="text" id="fullName" name="ФИО"><br>
+                <span id="fullNameError" class="error-message"></span><br>
+                
+                <label for="password">Введите пароль:</label>
+                <input type="password" id="password" name="Пароль"><br>
+                <span id="passwordError" class="error-message"></span><br>
+                
+                <label for="occupation">Ваш род занятий:</label>
+                <select id="occupation" name="Род занятий">
+                    <option value="Инф. технологии">Инф. технологии</option>
+                    <option value="Робототехника">Робототехника</option>
+                    <option value="Машиностроение">Машиностроение</option>
+                    <option value="Хим. технология">Хим. технология</option>
+                </select><br><br>
+                
+                <div class="gender-column">
+                    <label for="gender">Пол:</label>
+                    <div class="gender-radio">
+                        <input type="radio" id="male" name="Пол" value="Мужской">
+                        <label for="male">Мужской</label>
+                        <input type="radio" id="female" name="Пол" value="Женский">
+                        <label for="female">Женский</label><br>
+                    </div>                    
+                </div>
+                <span id="genderError" class="error-message"></span><br>
+                
+                <label for="education">Сведения об образовании:</label>
+                <textarea id="education" name="Сведения об образовании" rows="4" cols="50"></textarea><br><br>
+                
+                <div class="preference-column">
+                    <div class="preference-labels">
+                        <label class="label_pr" id="preferenceLabel">Ваши предпочтения</label><br>
+                        <label>(один или несколько вариантов):</label><br>
+                    </div>
+                    <div class="preference-radio">
+                        <input type="checkbox" id="preference1" name="Предпочтение" value="Все равно">
+                        <label for="preference1">Все равно</label><br>
+                        <input type="checkbox" id="preference2" name="Предпочтение" value="Работа с клиентами">
+                        <label for="preference2">Работа с клиентами</label><br>
+                        <input type="checkbox" id="preference3" name="Предпочтение" value="Работа с документами">
+                        <label for="preference3">Работа с документами</label><br>
+                        <input type="checkbox" id="preference4" name="Предпочтение" value="Работа в одиночку">
+                        <label for="preference4">Работа в одиночку</label><br>
+                    </div>
+                </div>
+                <span id="preferenceError" class="error-message"></span><br>
+
+                <div class="button">
+                    <button type="button" onclick="submitForm()">Отправить данные</button>
+                    <button type="button" onclick="resetForm()">Очистить форму</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="output-column" id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

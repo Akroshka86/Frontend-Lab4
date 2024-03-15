@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('Fon.jpg');
+    background-size: cover;
+    color: white; 
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 300px;
+}
+
+.form-column, .output-column {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.form-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+
+label {
+    display: inline-block;
+    width: 240px; 
+}
+
+
+.gender-column {
+    display: flex;
+}
+
+.gender-column label {
+    width: 240px;
+}
+
+
+.gender-radio label {
+    width: auto; 
+    margin-right: 10px;
+}
+
+textarea {
+    vertical-align: top;
+    vertical-align: top;
+    max-width: 100%; 
+    max-height: 200px; 
+    resize: vertical; 
+    overflow-y: auto;
+}
+
+.preference-column {
+    display: flex;
+}
+
+.button {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+}
+
+.output-column p {
+    margin-bottom: 10px;
+    margin-left: 100px;
+    font-size: 16px; 
+    word-wrap: break-word; 
+    max-width: 400px; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.output-column h2 {
+    margin-bottom: 10px;
+    text-align: center; 
+}
+
+
+.output-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.myForm{
+    font-size: 16px;
+    color: white; 
+}
+
+.button button {
+    background-color: #770fb4c0; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.5s; 
+    margin-top: 10px;
+}
+
+.button button:hover {
+    background-color: #770fb4; 
+}
+.myForm label{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.myForm span{
+    font-size: 12px;
+    color: rgb(248, 134, 134); 
+}
+
+#preferenceLabel.label_pr{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
